@@ -1,4 +1,6 @@
 spring:
+  zipkin:
+    base-url: http://localhost:9411
   datasource:
     url: jdbc:postgresql://localhost:5000/postgres
     username: postgres
@@ -17,3 +19,10 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8888/eureka
+management:
+  endpoint:
+    health:
+      show-details: always
+    web:
+      exposure:
+        include: *
